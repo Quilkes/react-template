@@ -36,7 +36,7 @@ export default function App() {
             duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.6"
+          "-=0.6",
         )
         .from(
           ".hero-buttons button",
@@ -47,7 +47,7 @@ export default function App() {
             stagger: 0.1,
             ease: "power3.out",
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           ".hero-note",
@@ -55,7 +55,7 @@ export default function App() {
             opacity: 0,
             duration: 0.6,
           },
-          "-=0.2"
+          "-=0.2",
         );
 
       // Hero Grid Preview
@@ -120,7 +120,7 @@ export default function App() {
         ease: "power2.out",
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
@@ -129,7 +129,7 @@ export default function App() {
       <header className="sticky top-0 z-30 border-b border-zinc-900/60 bg-[#0b0b0b]/80 backdrop-blur">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="size-8 rounded-md bg-linear-to-br from-white to-zinc-300"></div>
+            <img src="/logo.svg" alt="Adaptar" className="size-8" />
             <span className="text-lg font-semibold tracking-tight">
               Adaptar
             </span>
@@ -354,7 +354,7 @@ export default function App() {
       <footer className="border-t border-zinc-900/60 bg-[#0b0b0b]">
         <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
           <div className="flex items-center gap-2">
-            <div className="size-5 rounded-sm bg-zinc-200"></div>
+            <img src="/logo.svg" alt="Adaptar" className="size-5" />
             <span className="font-medium text-zinc-300">Adaptar</span>
             <span className="hidden md:inline text-zinc-700">|</span>
             <span className="hidden md:inline">Build faster with AI</span>
