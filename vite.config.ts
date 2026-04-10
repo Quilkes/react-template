@@ -9,6 +9,21 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    // Keep first preview interactive by prebundling the core runtime eagerly,
+    // while deferring heavy optional libraries until they are actually used.
+    include: ["react", "react-dom", "clsx"],
+    exclude: [
+      "three",
+      "@react-three/fiber",
+      "@react-three/drei",
+      "framer-motion",
+      "gsap",
+      "@gsap/react",
+      "react-icons",
+      "tailwind-merge",
+    ],
+  },
   server: {
     host: "0.0.0.0",
     port: 3000,
