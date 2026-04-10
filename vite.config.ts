@@ -10,8 +10,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    // Keep first preview interactive by prebundling the core runtime eagerly,
-    // while deferring heavy optional libraries until they are actually used.
     include: ["react", "react-dom", "clsx"],
     exclude: [
       "three",
