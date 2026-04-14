@@ -2,10 +2,10 @@ export default function App() {
   return (
     <div className="h-screen bg-[#0b0b0b] text-white">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3">
           <img src="/logo.svg" alt="Adaptar" className="size-8" />
           <span className="text-lg font-semibold tracking-tight">Adaptar</span>
-        </div>
+        </a>
 
         <div className="flex items-center gap-3">
           <a
@@ -35,10 +35,7 @@ export default function App() {
               <h1 className="hero-title text-4xl md:text-6xl font-semibold tracking-tight">
                 <span className="block">Design, build, and launch</span>
                 <span className="block mt-2">
-                  with{" "}
-                  <span className="bg-linear-to-r from-zinc-100 to-zinc-400 bg-clip-text text-transparent">
-                    Adaptar
-                  </span>
+                  with <span className="">Adaptar</span>
                 </span>
               </h1>
               <p className="hero-desc mt-6 text-zinc-400 text-base md:text-lg max-w-2xl mx-auto">
