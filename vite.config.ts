@@ -10,8 +10,10 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "clsx"],
-    exclude: [
+    include: [
+      "react",
+      "react-dom",
+      "clsx",
       "three",
       "@react-three/fiber",
       "@react-three/drei",

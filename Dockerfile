@@ -18,6 +18,12 @@ RUN bun install --frozen-lockfile
 # Copy the rest of the application
 COPY . .
 
+# Pre-warm the Vite dep cache so the first browser load doesn't trigger
+# on-demand bundling of three/framer-motion/gsap/etc. at runtime.
+# "vite optimize" writes pre-bundled chunks to node_modules/.vite/deps/
+# and stays there in the image — dev server picks them up immediately.
+RUN bunx vite optimize
+
 # Expose the dev server port
 EXPOSE 3000
 
