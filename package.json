@@ -34,6 +34,6 @@
     "vite": "^5.4.19"
   },
   "overrides": {
-    "react-reconciler": "0.27.0"
+    "react-reconciler": "0.29.0"
   }
 }
