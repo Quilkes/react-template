@@ -226,6 +226,10 @@ function adaptarBrowserRuntimeBridge(): Plugin {
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 export default defineConfig({
+  // When running behind adaptar-proxy, requests arrive at /{workspaceId}/*.
+  // base makes Vite prefix all asset URLs so the browser doesn't request
+  // /@vite/client at the proxy root (which has no machine mapping).
+  base: process.env.VITE_BASE || "/",
   plugins: [
     adaptarServerErrorReporter(), // Layer 1: process-level, catches before browser loads
     adaptarBrowserRuntimeBridge(), // Layer 2: browser-level, catches runtime errors
