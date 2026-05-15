@@ -286,6 +286,6 @@ export default defineConfig({
     hmr: {
       overlay: false,
     },
-    allowedHosts: [".modal.host", ".w.modal.host"],
+    allowedHosts: [".fly.dev"],
   },
 });
