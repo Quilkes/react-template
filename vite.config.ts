@@ -73,6 +73,6 @@ export default defineConfig({
       clientPort: 443,
       path: `/${process.env.VITE_BASE?.replace(/^\/|\/$/g, "") || ""}/`,
     },
-    allowedHosts: [".fly.dev"],
+    allowedHosts: true,
   },
 });
