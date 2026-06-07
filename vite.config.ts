@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { adaptar } from "adaptar-vite-plugin";
 
 export default defineConfig({
   base: process.env.VITE_BASE || "/",
-  plugins: [react()],
+  plugins: [react(), adaptar()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -69,7 +70,6 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     hmr: {
-      overlay: false,
       clientPort: 443,
       path: `/${process.env.VITE_BASE?.replace(/^\/|\/$/g, "") || ""}/`,
     },
